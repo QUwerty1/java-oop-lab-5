@@ -2,7 +2,6 @@ package gui.TaskTabs;
 
 import gui.MainWindow;
 import logic.IntArray.IntArray;
-import logic.IntArray.WrongConditionStringException;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,7 +70,7 @@ public class ConditionTask extends JPanel {
                                 .toString());
                 hasAnything = true;
             }
-        } catch (WrongConditionStringException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(
                     SwingUtilities.getWindowAncestor(this),
                     "Некорректное значение условия",

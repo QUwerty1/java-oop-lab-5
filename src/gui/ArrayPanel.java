@@ -1,15 +1,15 @@
 package gui;
 
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import java.awt.*;
 
 public class ArrayPanel extends JPanel {
 
     private boolean isRightArray = true;
-    private final MainWindowController controller;
+    private final IntArrayModel controller;
 
     private final JTextField arrayField = new JTextField("0");
     private final JLabel isRightLabel = new JLabel("");
@@ -22,7 +22,7 @@ public class ArrayPanel extends JPanel {
         }
     }
 
-    public MainWindowController getController() {
+    public IntArrayModel getController() {
         return controller;
     }
 
@@ -39,7 +39,7 @@ public class ArrayPanel extends JPanel {
         controller.getIntArray().setNumbers(array);
     }
 
-    public ArrayPanel(MainWindowController controller) {
+    public ArrayPanel(IntArrayModel controller) {
         this.controller = controller;
         setBorder(new EmptyBorder(10, 10, 10, 10));
         setLayout(new BorderLayout());
@@ -132,5 +132,4 @@ public class ArrayPanel extends JPanel {
                     JOptionPane.ERROR_MESSAGE
             );
     }
-
 }

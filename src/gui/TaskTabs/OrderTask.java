@@ -1,6 +1,6 @@
 package gui.TaskTabs;
 
-import gui.MainWindowController;
+import gui.IntArrayModel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -8,10 +8,10 @@ import java.awt.*;
 
 public class OrderTask extends JPanel {
 
-    private final MainWindowController controller;
+    private final IntArrayModel controller;
     private final JLabel order = new JLabel("");
 
-    public OrderTask(MainWindowController controller) {
+    public OrderTask(IntArrayModel controller) {
         this.controller = controller;
         setLayout(new GridBagLayout());
         setBorder(new EmptyBorder(10, 10, 10, 10));

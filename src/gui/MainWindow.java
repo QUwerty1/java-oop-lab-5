@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class MainWindow extends JFrame {
 
-    private final MainWindowController controller = new MainWindowController();
+    private final IntArrayModel controller = new IntArrayModel();
     private final TasksTabsPane tabsPane = new TasksTabsPane(this);
     private final ArrayPanel arrayPanel = new ArrayPanel(controller);
 
@@ -14,7 +14,7 @@ public class MainWindow extends JFrame {
         return arrayPanel;
     }
 
-    public MainWindowController getController() {
+    public IntArrayModel getController() {
         return controller;
     }
 
@@ -32,6 +32,7 @@ public class MainWindow extends JFrame {
         choosePanel.setMinimumSize(new Dimension(260, 0));
 
         JSplitPane mainPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, choosePanel, tabsPane);
+        mainPane.setEnabled(false);
 
         add(arrayPanel, BorderLayout.NORTH);
         add(mainPane, BorderLayout.CENTER);

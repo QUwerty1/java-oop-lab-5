@@ -1,8 +1,8 @@
+import gui.MainWindow;
 import javax.swing.*;
 
-import gui.MainWindow;
-
-import java.awt.*;
+// TODO Добавить отображение массива в виде таблицы
+// FIXME Исправить вылет ошибки
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Main {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 //            UIManager.getLookAndFeelDefaults()
 //                    .put("defaultFont", new Font("Arial", Font.PLAIN, 14));
-        } catch (Exception ignored) {
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException ignored) {
             System.out.println("Unable to load LookAndFeel");
         }
         MainWindow mainWindow = new MainWindow();

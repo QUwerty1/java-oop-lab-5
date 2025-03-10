@@ -2,7 +2,7 @@ package gui;
 
 import logic.IntArray.IntArray;
 
-public class MainWindowController {
+public class IntArrayModel {
 
     private final IntArray intArray;
 
@@ -10,7 +10,7 @@ public class MainWindowController {
         return intArray;
     }
 
-    public MainWindowController() {
+    public IntArrayModel() {
         intArray = new IntArray(new int[] {0});
     }
 }

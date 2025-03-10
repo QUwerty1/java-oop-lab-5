@@ -67,7 +67,6 @@ public class ArrayFileDialog extends JFileChooser {
         if (chooseStatus == JFileChooser.APPROVE_OPTION) {
 
             File file = getSelectedFile();
-
             try (Reader reader = switch (((FileNameExtensionFilter)
                     getFileFilter()).getExtensions()[0]) {
                 case "array" -> new BinaryReader(new FileInputStream(file));
